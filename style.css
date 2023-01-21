@@ -1,12 +1,11 @@
 /* Custom CSS for the page */
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
-    min-height: 200px; /* Set minimum height */
+    min-height: 300px; /* Set minimum height */
 }
 
 /* Add some padding and margin to the carousel */
 .carousel {
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -15,6 +14,7 @@
     background-color: #333;
     color: #fff;
     padding: 15px;
+    margin-bottom: 0px;
 }
 
 /* Add some styling to the paragraphs */
