@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <!-- <link href="./assets/favicon.ico" rel="icon"> -->
   
-  <title>Sara Yoga</title>  
+  <title>Sara - Gallery</title>  
 
 <link href="./main.3da94fde.css" rel="stylesheet"></head>
 
@@ -60,6 +60,7 @@
           </p>
                        
         </div> -->
+
       </nav> 
     
     </div>
@@ -67,16 +68,12 @@
 </header>
 
   
-<div class="hero-full-container background-image-container white-text-container" style="background-image:url('./assets/images/sara.jpg')">
-  <div class="overlay-gradient"></div>
+<div class="hero-full-container background-image-container white-text-container" id="photosDiv" style="background-image:url('assets/images/sara_gallery01.jpg')">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-7 col-md-offset-1">
+      <div class="col-xs-12">
         <div class="hero-full-wrapper">
-          <div class="text-content">
-            <h1>Sara Vannucci</h1>
-            <p>Sara welcomes with joy the opportunity to share her love for yoga and her experience with students seeking to find their own practice. 
-            </p>
+          <div class="text-content  text-center">
           </div>
         </div>
       </div>
@@ -84,12 +81,54 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    navbarFixedTopAnimation();
-    closeMenuBeforeGoingToPage();
-  });
-</script>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <!-- <img src="./assets/images/sara_h1.jpg" alt="" class="img-responsive">
+        <p>...</p> -->
+        
+        <div class="row">
+            <div class="col-md-6">
+            <img src="./assets/images/sara_v1.jpg" class="img-responsive" alt="">
+            <p>Paris, France</p>
+            </div>
+            <div class="col-md-6">
+            <img src="./assets/images/sara_v2.jpg" class="img-responsive" alt="">
+            <p>Mysore, India</p>
+            </div>
+        </div>
+
+        <img src="./assets/images/sara_h1.jpg" class="img-responsive" alt="">
+        <p>Mysore, India</p>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <ul class="navbar-nav nav ptr" onclick="photoPrev()">
+          <li>
+            <a title="" class="project-nav left"><span class="project-number">01</span>Previous</a>
+          </li>
+        </ul>
+        <p class="h5 navbar-text">more<i class="fa fa-chevron-down arrow-down" aria-hidden="true"></i></p>
+
+        <ul class="navbar-nav nav navbar-right ptr" onclick="photoFwd()">
+          <li>
+            <a title="" class="project-nav right"><span class="project-number">03</span>Next </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -100,7 +139,29 @@
       closeMenuBeforeGoingToPage();
       navActivePage();
     });
+
+    let i = 1;
+    const images = ['url(assets/images/sara_gallery01.jpg)', 'url(assets/images/sara_v1.jpg)', 'url(assets/images/sara_v2.jpg)', 'url(assets/images/sara_h1.jpg)'];
+    function photoPrev() {
+      document.getElementById("photosDiv").style.backgroundImage = images[i];
+      if (i <= 0)
+        i = images.length - 1;
+      else
+        i -= 1;
+    }
+    function photoFwd() {
+      document.getElementById("photosDiv").style.backgroundImage = images[i];
+      if (i >= images.length)
+        i = 0;
+      else
+        i += 1;
+    }
 </script>
+<style>
+.ptr {
+  cursor: pointer;
+}
+</style>
  <script type="text/javascript" src="./main.4c6e144e.js"></script></body>
 
 </html>
